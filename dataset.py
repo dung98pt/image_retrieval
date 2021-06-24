@@ -49,4 +49,11 @@ def load_dataset(is_test=True, normalize=False):
     print("Số lớp: {} - {}".format(len(set(labels)), set(labels)))
     print("Số mẫu train: {}, Số mẫu test: {}".format(len(y_train), len(y_test)))
     return (X_train, y_train), (X_test, y_test)
-# load_dataset()
+
+def load_cifar10_dataset():
+    X_train = np.load("data/cifar10_trainx.npy")
+    y_train = np.load("data/cifar10_trainy.npy")
+    X_test =  np.load("data/cifar10_testx.npy")
+    y_test =  np.load("data/cifar10_testy.npy")
+    print(X_train.shape)
+    return (X_train, y_train), (X_test, y_test)

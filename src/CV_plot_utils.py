@@ -22,7 +22,7 @@ def plot_img(img, range=[0, 255]):
 def plot_query_retrieval(img_query, imgs_retrieval, outFile):
     n_retrieval = len(imgs_retrieval)
     fig = plt.figure(figsize=(2*n_retrieval, 4))
-    fig.suptitle("Image Retrieval (k={})".format(n_retrieval), fontsize=25)
+    fig.suptitle("Truy vấn ảnh (k={})".format(n_retrieval), fontsize=25)
 
     # Plot query image
     ax = plt.subplot(2, n_retrieval, 0 + 1)
@@ -32,7 +32,7 @@ def plot_query_retrieval(img_query, imgs_retrieval, outFile):
     for axis in ['top', 'bottom', 'left', 'right']:
         ax.spines[axis].set_linewidth(4)  # increase border thickness
         ax.spines[axis].set_color('black')  # set to black
-    ax.set_title("query",  fontsize=14)  # set subplot title
+    ax.set_title("Ảnh truy vấn",  fontsize=14)  # set subplot title
 
     # Plot retrieval images
     for i, img in enumerate(imgs_retrieval):

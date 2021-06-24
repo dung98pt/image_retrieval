@@ -1,11 +1,16 @@
 from src.autoencoder import AutoEncoder
 import tensorflow as tf 
 import os 
+import numpy as np 
 from dataset import load_dataset
 # Build models
 
 outDir = os.path.join(os.getcwd(), "output", "convAE")
 (X_train, y_train), (X_test, y_test) = load_dataset(is_test=False, normalize=True)
+# np.save("data/train_x.npy", X_train)
+# np.save("data/train_y.npy", y_train)
+# np.save("data/test_x.npy", X_test)
+# np.save("data/test_y.npy", y_test)
 shape_img = X_train[0].shape
 modelName = "convAE"
 trainModel = True
